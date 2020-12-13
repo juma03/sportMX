@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87" height="72" viewBox="0 0 87 72">
+    <g transform="translate(-12 -44)">
+        <text transform="translate(12 102)" fill="#ffffff" font-size="54" font-family="YuGothicUI-Regular, Yu Gothic UI">
+            <tspan x="0" y="0">1</tspan>
+        </text>
+        <text transform="translate(38 78)" fill="#ffffff" font-size="18" font-family="Tahoma" letter-spacing="0.01em">
+            <tspan x="0" y="0">Day</tspan>
+        </text><line y1="0.522" x2="59.152" transform="translate(38.348 82.5)" fill="none" stroke="#ffffff" stroke-width="1"/><text transform="translate(40 101)" fill="#ffffff" font-size="18" font-family="Tahoma">
+            <tspan x="0" y="0">License</tspan>
+        </text>
+    </g>
+</svg>
