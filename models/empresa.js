@@ -9,7 +9,7 @@ mongoose.SchemaTypes.Email.defaults.message = 'Email address is invalid';
 
 var empresaSchema = new Schema({
     creado: { type: Date, default: Date.now },
-    nombreEmpresa: { type: String, require: [true, 'El nombre de la empresa es necesario'] },
+    nombrempresa: { type: String, require: [true, 'El nombre de la empresa es necesario'] },
     email: { type: mongoose.SchemaTypes.Email, unique: true, required: [true, 'El correo es importante'] },
     telefono: { type: String, require: false },
     celular: { type: String, require: false },

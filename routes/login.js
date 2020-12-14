@@ -69,7 +69,7 @@ app.post('/', async(req, res) => {
         identificador=usuarioBD.idempresa;
 
 
-        Empresa.find({_id:identificador},(err, empresa) => {
+        Empresa.findOne({_id:identificador},(err, empresa) => {
 
             if (err) {
                 return res.status(500).json({
@@ -80,12 +80,12 @@ app.post('/', async(req, res) => {
             }
 
 
+            
 
+nombreempresacceso = empresa;
+nombredelaempresa = empresa.nombrempresa;
+emailempresa =empresa.email;
 
-nombreempresacceso = empresa[0];
-nombredelaempresa = empresa[0].nombreEmpresa;
-emailempresa =empresa[0].email;
-console.log ('datos empresa', nombreempresacceso.role)
            
 
         });
@@ -123,7 +123,7 @@ console.log ('datos empresa', nombreempresacceso.role)
              token: token,
              id: usuarioBD.idempresa,
              empresa: usuarioBD.role,
-             nombreEmpresa: nombredelaempresa,
+             nombrempresa: nombredelaempresa,
              emailempresa,
              datosempresa: nombreempresacceso
          });

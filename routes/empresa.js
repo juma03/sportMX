@@ -69,7 +69,7 @@ app.post('/capturainfo', async(req, res) => {
 
 
     var empresa = new Empresa({
-        nombreEmpresa: body.nombreEmpresa,
+        nombrempresa: body.nombrempresa,
         email: body.email,
         telefono: body.telefono,
         celular: body.celular,
@@ -189,7 +189,7 @@ console.log ('identificador empresa', id);
 
 Empresa.findById(idempresa, (err, empreesactualizado) => {
 
-    empreesactualizado.nombreEmpresa = body.nombreEmpresa;
+    empreesactualizado.nombrempresa = body.nombrempresa;
     empreesactualizado.email = body.email;
     empreesactualizado.telefono = body.telefono;
     empreesactualizado.celular = body.celular;
