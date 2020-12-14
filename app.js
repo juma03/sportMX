@@ -116,7 +116,7 @@ var empresaRoutes = require('./routes/empresa');
 //coneccin ala base de datos
 
 // ************************esto se usa cuando esta ne modo produccion
-// app.use('/', express.static('client', { redirect: false }));
+ app.use('/', express.static('client', { redirect: false }));
 //************************* */
 
 
@@ -168,9 +168,9 @@ app.use('/', appRoutes);
 
 
 //modo produccion
-// app.get('*', function(req, res, next) {
-//     res.sendFile(path.resolve('client/index.html'));
-// })
+ app.get('*', function(req, res, next) {
+     res.sendFile(path.resolve('client/index.html'));
+ })
 
 // io.on('connection', function(cliente) {
 //     console.log('a user connected');
@@ -190,7 +190,7 @@ app.use('/', appRoutes);
 
 // });
 
-
+// estso es una pequena priebas 
 
 // http.listen(app.get('port'), function() {
 //     console.log('listening on *:3000');
