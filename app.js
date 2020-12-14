@@ -15,11 +15,12 @@ const mifunctionfolios = require('./function/asignarfolios');
 // const soCket = require('./sockett/socket');
 
 var app = express();
+var cors = require('cors');
 
  
 
 
-
+app.use(cors());
 
 // app.use(function(req, res, next) {
 //     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
