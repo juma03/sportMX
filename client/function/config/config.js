@@ -1,0 +1,1 @@
+module.exports.SEED = 'esto-esta-muy-difiCIL-DECIFRARR';

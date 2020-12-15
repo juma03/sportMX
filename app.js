@@ -190,7 +190,7 @@ app.use('/', appRoutes);
 
 // });
 
-// estso es una pequena priebas 
+
 
 // http.listen(app.get('port'), function() {
 //     console.log('listening on *:3000');
