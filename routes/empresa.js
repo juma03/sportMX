@@ -179,6 +179,7 @@ Usuario.findById(id, async(err, usuarioactualizado) => {
         usuarioactualizado.email = body.emailpersonal;
         usuarioactualizado.role = body.role;
         usuarioactualizado.activado = body.activado;
+        usuarioactualizado.alias = body.alias;
 
         await usuarioactualizado.save((err, usuarioactualiado) => {
 

@@ -202,7 +202,7 @@ app.get('/recibopublico/:id', (req, res) => {
 
 app.get('/pagados', (req, res) => {
 
-    Solicitante.find({ procesarSolicitud: true, procesado: false }).sort({numeroperacion:-1})
+    Solicitante.find({ procesarSolicitud: true, procesado: false }).sort({idsolicitante:-1})
         .exec((err, solicitante) => {
             if (err) {
                 return res.status(500).json({
