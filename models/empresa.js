@@ -13,7 +13,7 @@ var empresaSchema = new Schema({
     email: { type: mongoose.SchemaTypes.Email, unique: true, required: [true, 'El correo es importante'] },
     telefono: { type: String, require: false },
     celular: { type: String, require: false },
-    direccionweb: { type: String, require: false },
+    direccionweb: { type: String, require: false, default: "Ninguna" },
     direccion: { type: String, require: false },
     ciudad: { type: String, require: false },
     estado: { type: String, require: false },

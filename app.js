@@ -94,6 +94,7 @@ var recibiremail = require('./routes/recibiremail');
 var descargafile = require('./routes/descargafile');
 var historialglobal = require('./routes/historial');
 var emailtoTuripes = require('./routes/mailavisos');
+var emailtoclientes = require('./routes/emailavisosclientes');
 var movimientoRouter = require('./routes/movimiento');
 var movimientofilterRouter = require('./routes/movimientofilter');
 var compraRouter = require('./routes/precompra');
@@ -148,6 +149,7 @@ app.use('/seleccionado', seleccionable);
 app.use('/descargapdf', descargaPDF);
 app.use('/email', enviaemail);
 app.use('/recibiremail', recibiremail);
+app.use('/enviartocliente', emailtoclientes);
 
 app.use('/descargafile', descargafile);
 app.use('/historial', historialglobal);
