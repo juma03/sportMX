@@ -144,22 +144,22 @@ app.get('/buscaultimaprecompra/:idempresa', (req, res) => {
 
 app.get('/:id', (req, res) => {
   var id = req.params.id;
+  console.log ("encontrado precompra");
 
-
-  Precompras.findById(id, (err, precompra) => {
-    Empresa.populate(precompra, { path: "idempresa" }, function (err, precompra) {
-      if (err) {
-        return res.status(500).json({
+  Precompras.findById(id)
+    .populate('idempresa')
+    .exec ( )
+    .then (precompra =>{
+      if (!precompra) {
+        return res.status(400).json({
           ok: false,
           mensaje: 'Error cargando solicitantes',
           errors: err
         })
+
       }
 
-
-
-      //se localizara los movimienot de la precompra
-
+      
       Movimiento.find({ idprecompra: precompra._id }, (err, movimiento) => {
         if (err) {
           return res.status(500).json({
@@ -169,6 +169,8 @@ app.get('/:id', (req, res) => {
           });
         }
 
+
+
         res.status(200).json({
           ok: true,
           precompra,
@@ -176,12 +178,8 @@ app.get('/:id', (req, res) => {
         })
 
       });
-      // ******************
 
-
-
-
-    })
+    }) 
 
 
 
@@ -189,7 +187,7 @@ app.get('/:id', (req, res) => {
   });
 
 
-});
+
 
 
 
