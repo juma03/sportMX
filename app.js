@@ -117,7 +117,7 @@ var empresaRoutes = require('./routes/empresa');
 //coneccin ala base de datos
 
 // ************************esto se usa cuando esta ne modo produccion
-// app.use('/', express.static('client', { redirect: false }));
+ app.use('/', express.static('client', { redirect: false }));
 //************************* */
 
 
@@ -170,9 +170,9 @@ app.use('/', appRoutes);
 
 
 //modo produccion
-// app.get('*', function(req, res, next) {
-//     res.sendFile(path.resolve('client/index.html'));
-// })
+ app.get('*', function(req, res, next) {
+     res.sendFile(path.resolve('client/index.html'));
+ })
 
 // io.on('connection', function(cliente) {
 //     console.log('a user connected');
